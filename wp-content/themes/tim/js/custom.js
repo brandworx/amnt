@@ -13,6 +13,7 @@ jQuery(document).ready(function($){
 			$('#popUp #popForm').hide();
 		});
 	});
+
 	//show pop up for contact buttons
 	$(function(){
 		$('#callCTA a.button').click(function(e){
@@ -33,5 +34,9 @@ jQuery(document).ready(function($){
 	$(function(){
 		$eventImgPH = $('#eventCall').height();
 		$eventImgH = $('#eventLeft .eventBG').height($eventImgPH);
+	});
+	$(function(){
+		$barHeight = $('#callCTA').height();
+		$arrowImgH = $('.arrow').height($barHeight);
 	});
 });

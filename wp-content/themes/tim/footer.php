@@ -24,6 +24,9 @@
 		</div>
 
 		<div id="site-info">
+			<nav id="footer-navigation" class="main-navigation" role="navigation">
+				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+			</nav><!-- #site-navigation -->
 			<div id="aboutSocial">
 				<a class="social facebook" target="_blank" href="<?php the_field('facebook_url','option'); ?>"></a>
 				<a class="social twitter" target="_blank" href="<?php the_field('twitter_url','option'); ?>"></a>

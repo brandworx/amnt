@@ -41,9 +41,9 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<a id="logo" href="<?php echo bloginfo('url'); ?>"><img src="<?php the_field('logo','option'); ?>" /></a>
+		<a id="phone" target="_blank" href="tel:<?php the_field('phone_number','option'); ?>"><?php the_field('phone_number','option'); ?></a>
 		<a id="facebook" class="social facebook right" target="_blank" href="<?php the_field('facebook_url','option'); ?>"></a>
 		<a id="twitter" class="social twitter right" target="_blank" href="<?php the_field('twitter_url','option'); ?>"></a>
-		<a id="phone" target="_blank" href="tel:<?php the_field('phone_number','option'); ?>"><?php the_field('phone_number','option'); ?></a>
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', 'tim' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>

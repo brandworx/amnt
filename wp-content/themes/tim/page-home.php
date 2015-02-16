@@ -22,6 +22,9 @@ get_header(); ?>
 						echo '<div id="play"></div>';
 						echo '<img src="' . $videoThumb . '" />';
 					} else {
+						echo '<div class="videoWrapper">';
+						echo $video;
+						echo '</div>';
 						echo '<div id="play"></div>';
 					}
 				?>
