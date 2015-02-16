@@ -1089,6 +1089,19 @@ a:active {
 /*--------------------------------------------------------------
 10.2 Asides
 --------------------------------------------------------------*/
+.entry-header { padding: 0; position: relative; }
+.entry-title {
+	background: rgba(0, 182, 217, 0.75);
+	color: #ffffff;
+	position: absolute;
+	bottom: 12%;
+	left: 0;
+	padding: 1% 1% 1% 8%;
+	font-size: 50px;
+	text-transform: none;
+	letter-spacing: 2px;
+	min-width: 40%;
+}
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
 	display: none;
