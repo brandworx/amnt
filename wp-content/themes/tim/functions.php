@@ -182,6 +182,7 @@ require get_template_directory() . '/inc/jetpack.php';
 add_image_size( 'slide-thumb', 1920, 750, true ); // (cropped)
 add_image_size( 'testimonial-thumb', 400, 400, true ); // (cropped)
 add_image_size( 'event-thumb', 600, 600, true ); // (cropped)
+add_image_size( 'eventSmall', 90, 90, true ); // (cropped)
 add_image_size( 'title-bg', 1920, 576, true ); // (cropped)
 
 

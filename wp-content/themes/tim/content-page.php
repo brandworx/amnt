@@ -6,20 +6,7 @@
  */
 ?>
 
-<?php
-
-	$titleBG = get_field('title_bg');
-	// thumbnail
-	$titleSize = 'title-bg';
-	$titleThumb = $titleBG['sizes'][ $titleSize ];
-
-?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="entry-header">
-		<img src="<?php echo $titleThumb; ?>" />
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</div><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php the_content(); ?>
