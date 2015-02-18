@@ -19,7 +19,6 @@
 	$oForm = get_field('offer_form','option');
 ?>
 	<div class="entry-header">
-		<img src="<?php if($titleBG){ echo $titleThumb; } else{ echo $defThumb; } ?>" />
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<div id="offerHead">
 			<h1 class="offerTitle"><?php echo $oTitle; ?></h1>

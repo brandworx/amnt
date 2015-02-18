@@ -160,7 +160,7 @@ get_header(); ?>
 					<h2><?php the_field('phone_cta_title','option'); ?></h2>
 				</div>
 				<img class="arrow" src="<?php echo bloginfo('template_url'); ?>/images/call-border.png" />
-				<a class="button green" href="tel:<?php the_field('phone_number','option'); ?>"><?php the_field('phone_cta','option'); ?></a>
+				<a class="button green small" href="tel:<?php the_field('phone_number','option'); ?>"><?php the_field('phone_cta','option'); ?></a>
 			</div>
 
 			<div id="about">

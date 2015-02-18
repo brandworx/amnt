@@ -8,17 +8,20 @@
 get_header(); ?>
 
 	<?php get_template_part( 'content', 'header' ); ?>
-	<div id="primary" class="content-area full">
+	<div id="primary" class="content-area full clearfix">
 		<main id="main" class="site-main" role="main">
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 				<div class="event-content">
 		<?php 
-			$numEvents = get_field('num_events_sidebar','option');
+			$numEvents = get_field('num_posts','option');
 			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 			$events = array(
 				'post_type' => 'event',
+				'meta_key' => 'event_date',
+				'orderby' => 'meta_value_num',
+				'order' => 'ASC',
 				'posts_per_page' => $numEvents,
 				'paged' => $paged
 			);
@@ -32,14 +35,19 @@ get_header(); ?>
 					$location = get_field('event_location');
 					$city = get_field('event_city');
 					$state = get_field('event_state');
+					$text = get_field('cta_text');
+					$link = get_field('cta_link');
 				?>
 
 					<div class="event-entry">
 						<?php the_post_thumbnail('event'); ?>
 						<div class="event-sum">
 							<div id="slash"></div>
-							<h4><?php the_title(); ?></h4>
+							<h2><?php the_title(); ?></h2>
 							<span class="event-meta"><?php echo $date; ?> | <?php echo $location; ?> | <?php echo $city . ', ' . $state; ?></span>
+							<p><?php the_excerpt(); ?>
+							<?php if($text && $link){ echo '<a class="button green" href="' . $link . '">' . $text . '</a>'; } ?>
+							<a class="button blue" href="<?php the_permalink(); ?>">More Info</a>
 						</div>
 					</div>
 
@@ -52,10 +60,6 @@ get_header(); ?>
 			<?php endif; ?>
 
 				</div><!-- .entry-content -->
-
-				<footer class="entry-footer">
-					<?php tim_entry_footer(); ?>
-				</footer><!-- .entry-footer -->
 			</article><!-- #post-## -->
 		</main><!-- #main -->
 	</div><!-- #primary -->

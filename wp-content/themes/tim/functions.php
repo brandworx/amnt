@@ -184,6 +184,7 @@ add_image_size( 'testimonial-thumb', 400, 400, true ); // (cropped)
 add_image_size( 'event-thumb', 600, 600, true ); // (cropped)
 add_image_size( 'event', 960, 630, true ); // (cropped)
 add_image_size( 'eventSmall', 90, 90, true ); // (cropped)
+add_image_size( 'blogThumb', 875, 440, true ); // (cropped)
 add_image_size( 'title-bg', 1920, 576, true ); // (cropped)
 
 
@@ -212,6 +213,13 @@ function theme_settings_styles() {
 	$pLax1 = get_field('parallax_1','option');
 	$pLax2 = get_field('parallax_2','option');
 
+	$titleBG = get_field('title_bg');
+	$defBG = get_field('default_title_bg','option');
+	// thumbnail
+	$titleSize = 'title-bg';
+	$titleThumb = $titleBG['sizes'][ $titleSize ];
+	$defThumb = $defBG['sizes'][ $titleSize ];
+
     ?>
     <style type="text/css">
     	#featured { background: url("<?php echo $slideURL; ?>") no-repeat; background-size: 100%; }
@@ -223,6 +231,7 @@ function theme_settings_styles() {
     		padding: 50px 0;
     		background: url("<?php echo $pLax2; ?>") 50% -230px no-repeat fixed;
     	}
+    	.entry-header { background: url('<?php if($titleBG){ echo $titleThumb; } else{ echo $defThumb; } ?>') no-repeat; background-size: cover; }
 	</style>
     <?php
 }

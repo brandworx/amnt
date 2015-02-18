@@ -95,6 +95,7 @@ template {
 
 a {
 	background-color: transparent;
+	color: #b8d100;
 }
 
 a:active,
@@ -462,7 +463,7 @@ table {
 	color: #ffffff;
 	border: solid 2px #ffffff;
 	border-radius: 0;
-	padding: 10px 40px;
+	padding: 1% 4%;
 	text-decoration: none;
 	text-transform: uppercase;
 	box-sizing: border-box;
@@ -474,7 +475,7 @@ table {
 	-o-transition: all 500ms ease;
 	transition: all 500ms ease;
 }
-.button.small { padding: 5px 20px; font-size: 22px; }
+.button.small { padding: 1% 2%; font-size: 22px; }
 .button.green { background: #b8d100; color: #ffffff; font-weight: 700; }
 .button.green:hover { background: #ffffff; color: #b8d100; border-color: #b8d100; }
 .button.blue { background: #198696; color: #ffffff; }
@@ -672,9 +673,10 @@ table {
 --------------------------------------------------------------*/
 #footer-bar { background: #00b6d9; text-align: center; padding: 1%; color: #ffffff; }
 #footer-bar h2 { font-weight: 400; margin-bottom: 1%; }
-#footer-bar .field-wrap { display: inline-block; margin-right: 1%; }
-#footer-bar input { font-size: 28px; width: 100%; box-sizing: border-box; border-radius: 0; }
+#footer-bar .field-wrap { display: inline-block; vertical-align: top; margin-right: 1%; }
+#footer-bar input { font-size: 28px; box-sizing: border-box; border-radius: 0; }
 #footer-bar input[type="text"] { background: #198696; color: #ffffff; text-indent: 5%; border: none; border-radius: 0; }
+#footer-bar input[type="submit"] { font-weight: 400; padding: 4% 8%; }
 #footer-widgets { background: #198696; text-align: center; padding: 3%; }
 #footer-widgets-container { margin-left: 8%; }
 #footer-widgets .button { display: block; max-width: 300px; text-align: center; }
@@ -820,17 +822,18 @@ textarea {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: #b8d100;
+	text-decoration: none;
 }
 
 a:visited {
-	color: purple;
+	color: #198696;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	text-decoration: underline;
 }
 
 a:focus {
@@ -944,7 +947,7 @@ a:active {
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
-	margin: 0 0 1.5em;
+	margin: 1.5em 0;
 	overflow: hidden;
 }
 
@@ -1076,7 +1079,7 @@ a:active {
 }
 
 .hentry {
-	margin: 0 0 1.5em;
+	margin: 0;
 }
 
 .byline,
@@ -1100,10 +1103,21 @@ a:active {
 	margin: 0 0 1.5em;
 }
 
+.post-entry { clear: both; padding: 3%; overflow: auto; }
+.post-entry .wp-post-image { width: 48%; }
+.post-entry .right { width: 48%; }
+
+.comment-list { padding: 0; margin: 0 0 2%; }
+.comment-list a { color: #b8d100; text-decoration: none; }
+.comment-list a:hover { text-decoration: underline; }
+.comment-list .comment { background: #F4F4F4; padding: 3%; margin-top: 1%; }
+.comment-list .comment .children { margin: 0; padding: 0; }
+.comment-list .comment .children .comment { background: #ffffff; }
+
 /*--------------------------------------------------------------
 10.2 Asides
 --------------------------------------------------------------*/
-.entry-header { padding: 0; position: relative; }
+.entry-header { padding: 0; position: relative; overflow: auto; }
 .entry-header img { display: block; }
 .entry-title {
 	background: rgba(0, 182, 217, 0.75);
@@ -1117,15 +1131,16 @@ a:active {
 	text-shadow: 1px 1px 2px #000000;
 	letter-spacing: 2px;
 	min-width: 40%;
+	max-width: 58%;
 }
 #offerHead {
 	background: rgba(93, 106, 109, 0.9);
 	color: #ffffff;
-	position: absolute;
-	top: 20%;
-	right: 3%;
+	position: relative;
+	float: right;
 	width: 28%;
 	padding: 2%;
+	margin: 3%;
 	text-align: center;
 }
 .offerTitle {
@@ -1142,6 +1157,7 @@ a:active {
 
 .home #primary, #primary.full { padding: 0; }
 #primary { padding: 3%; overflow: auto; }
+.home #primary #main { width: auto; float: none; }
 .page #main { width: 68%; float: left; }
 .full #main { width: 100%; }
 #primary.page #secondary { width: 26%; float: right; }
@@ -1155,7 +1171,10 @@ a:active {
 	position: relative;
 	overflow: auto;
 }
-.event-sum { padding: 2%; position: absolute; width: 54%; top: 0; bottom: 0; }
+.event-sum { padding: 3%; position: absolute; width: 54%; top: 0; bottom: 0; }
+.event-sum h2 { color: #ffffff; text-shadow: 1px 1px 2px #000000; }
+.event-sum .event-meta { color: #b8d100; font-size: 27px; }
+.event-sum p { color: #ffffff; }
 #slash { position: absolute; width: 28%; top: -2px; bottom: 0; }
 .event-entry img { display: block; width: 46%; }
 .event-entry:nth-child(odd) img { float: right; }
@@ -1283,7 +1302,7 @@ object {
 
 /*** RESPONSIVE STYLES ***/
 @media only screen and (max-width: 1500px){
-	#offerHead { top: 10%; }
+
 }
 @media only screen and (max-width: 1400px){
 
