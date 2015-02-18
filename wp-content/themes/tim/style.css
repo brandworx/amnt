@@ -679,7 +679,7 @@ table {
 #footer-bar input[type="submit"] { font-weight: 400; padding: 4% 8%; }
 #footer-widgets { background: #198696; text-align: center; padding: 3%; }
 #footer-widgets-container { margin-left: 8%; }
-#footer-widgets .button { display: block; max-width: 300px; text-align: center; }
+#footer-widgets .button { display: block; width: 85%; max-width: 300px; text-align: center; }
 #footer-widgets .widget { display: inline-block; text-align: left; vertical-align: top; color: #ffffff; width: 25%; }
 #phoneFoot, #addressFoot, #emailFoot { margin-bottom: 10px; font-weight: 100; }
 #phoneFoot a, #addressFoot a, #emailFoot { color: #ffffff; text-decoration: none; }
@@ -771,7 +771,7 @@ textarea {
 5.0 Navigation
 --------------------------------------------------------------*/
 
-#logo { display: inline-block; float: left; width: 7%; max-width: 170px; }
+#logo { display: inline-block; float: left; width: 10%; max-width: 170px; }
 #headCTAs { display: inline-block; float: right; text-align: right; padding: 15px 2%; }
 #mobileMenu {
 	display: none;
@@ -796,8 +796,8 @@ textarea {
 .social {
 	display: inline-block;
 	vertical-align: top;
-	width: 58px;
-	height: 58px;
+	width: 42px;
+	height: 42px;
 	margin-right: 1%;
 	-webkit-transition: all 500ms ease;
 	-moz-transition: all 500ms ease;
@@ -810,7 +810,7 @@ textarea {
 .twitter:hover { background: url('images/twitter-hover.png') no-repeat; background-size: 100%; }
 #phone { 
 	display: inline-block;
-	font-size: 53px;
+	font-size: 38px;
 	color: #ffffff;
 	text-decoration: none;
 	line-height: normal;
@@ -852,9 +852,9 @@ a:active {
 	clear: right;
 	display: block;
 	float: right;
-	margin-top: 1%;
+	margin-top: 3%;
 }
-#footer-navigation.main-navigation { float: left; }
+#footer-navigation.main-navigation { float: left; margin: 0; }
 
 .main-navigation ul {
 	list-style: none;
@@ -1095,7 +1095,7 @@ a:active {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 0 0;
 }
 
 .page-links {
@@ -1160,6 +1160,7 @@ a:active {
 .home #primary #main { width: auto; float: none; }
 .page #main { width: 68%; float: left; }
 .full #main { width: 100%; }
+#primary.testimonials #main, #primary.faq #main { width: 100%; float: none; }
 #primary.page #secondary { width: 26%; float: right; }
 .event-small { color: #5d6a6d; clear: both; margin-bottom: 12px; overflow: auto; }
 .event-text {
@@ -1183,6 +1184,23 @@ a:active {
 .event-entry:nth-child(even) .event-sum { background: #198696; right: 0; }
 .event-entry:nth-child(odd) .event-sum #slash { background: url('images/slash-right.png') no-repeat; background-size: 100%; right: -27.8%; }
 .event-entry:nth-child(even) .event-sum #slash { background: url('images/slash-left.png') no-repeat; background-size: 100%; left: -27.8%; }
+
+.testimonial-entry, .faq-entry { background: #ebebeb; margin-bottom: 5%; }
+.titleHead { background: #b8d100; position: relative; }
+.face {
+	border: solid 4px #198696;
+	border-radius: 100%;
+	display: block;
+	float: left;
+	position: absolute;
+	top: -35%;
+	left: 2%;
+	width: 12%;
+}
+.titleHead h3 { display: inline-block; padding: 2% 3%; color: #ffffff; text-shadow: 1px 1px 2px #000000; }
+.testimonial-entry .titleHead h3 { margin-left: 14%; }
+.testimonial-entry p, .faq-entry p { padding: 3%; margin: 0; }
+.faq-entry .button { margin: 0 3% 3% 3%; }
 
 
 /*--------------------------------------------------------------

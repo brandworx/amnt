@@ -105,6 +105,9 @@ get_header(); ?>
 						</div>
 						<p>"<?php the_field('testimonial_3_text','option'); ?>"</p>
 					</div>
+					<br>
+
+					<a class="button green" href="<?php bloginfo('url'); ?>/testimonials/" style="margin-top: 4%;">Read More</a>
 				</div>
 			</div>
 
