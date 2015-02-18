@@ -1003,13 +1003,13 @@ a:active {
 .alignleft {
 	display: inline;
 	float: left;
-	margin-right: 1.5em;
+	margin-right: 5%;
 }
 
 .alignright {
 	display: inline;
 	float: right;
-	margin-left: 1.5em;
+	margin-left: 5%;
 }
 
 .aligncenter {
@@ -1104,6 +1104,7 @@ a:active {
 10.2 Asides
 --------------------------------------------------------------*/
 .entry-header { padding: 0; position: relative; }
+.entry-header img { display: block; }
 .entry-title {
 	background: rgba(0, 182, 217, 0.75);
 	color: #ffffff;
@@ -1139,16 +1140,30 @@ a:active {
 	display: none;
 }
 
+.home #primary, #primary.full { padding: 0; }
 #primary { padding: 3%; overflow: auto; }
-#primary.page #main { width: 68%; float: left; }
+.page #main { width: 68%; float: left; }
+.full #main { width: 100%; }
 #primary.page #secondary { width: 26%; float: right; }
 .event-small { color: #5d6a6d; clear: both; margin-bottom: 12px; overflow: auto; }
-.event-small .title {
+.event-text {
 	width: 68%;
-	display: inline-block;
-	vertical-align: top;
 }
 .event-small .title a { color: #b8d100; font-weight: 500; text-decoration: none; }
+
+.event-entry {
+	position: relative;
+	overflow: auto;
+}
+.event-sum { padding: 2%; position: absolute; width: 54%; top: 0; bottom: 0; }
+#slash { position: absolute; width: 28%; top: -2px; bottom: 0; }
+.event-entry img { display: block; width: 46%; }
+.event-entry:nth-child(odd) img { float: right; }
+.event-entry:nth-child(even) img { float: left; }
+.event-entry:nth-child(odd) .event-sum { background: #636363; left: 0; }
+.event-entry:nth-child(even) .event-sum { background: #198696; right: 0; }
+.event-entry:nth-child(odd) .event-sum #slash { background: url('images/slash-right.png') no-repeat; background-size: 100%; right: -27.8%; }
+.event-entry:nth-child(even) .event-sum #slash { background: url('images/slash-left.png') no-repeat; background-size: 100%; left: -27.8%; }
 
 
 /*--------------------------------------------------------------
@@ -1264,4 +1279,36 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+/*** RESPONSIVE STYLES ***/
+@media only screen and (max-width: 1500px){
+	#offerHead { top: 10%; }
+}
+@media only screen and (max-width: 1400px){
+
+}
+@media only screen and (max-width: 1300px){
+
+}
+@media only screen and (max-width: 1200px){
+
+}
+@media only screen and (max-width: 1024px){
+
+}
+@media only screen and (max-width: 900px){
+
+}
+@media only screen and (max-width: 768px){
+
+}
+@media only screen and (max-width: 720px){
+
+}
+@media only screen and (max-width: 480px){
+
+}
+@media only screen and (max-width: 320px){
+
 }
