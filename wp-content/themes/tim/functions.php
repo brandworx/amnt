@@ -140,9 +140,9 @@ function tim_scripts() {
 
 	wp_enqueue_script( 'tim-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
-	wp_enqueue_script( 'tim-plax', get_template_directory_uri() . '/js/plax.js', array(), '1', true );
-
 	wp_enqueue_script( 'tim-custom', get_template_directory_uri() . '/js/custom.js', array(), '1', true );
+
+	wp_enqueue_script( 'tim-plax', get_template_directory_uri() . '/js/plax.js', array(), '1', true );
 
 	wp_enqueue_script( 'tim-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 

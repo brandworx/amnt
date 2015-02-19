@@ -57,7 +57,7 @@ header {
 	background:-moz-linear-gradient( center top, #00b5d9 50%, #06a8c8 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00b5d9', endColorstr='#06a8c8');
 	background-color:#00b5d9;
-	padding: 10px 20px;
+	padding: 1% 2%;
 }
 
 article,
@@ -273,7 +273,7 @@ th {
 .videoWrapper {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
+	padding-top: 10%;
 	height: 0;
 }
 .videoWrapper iframe {
@@ -468,7 +468,7 @@ table {
 	text-transform: uppercase;
 	box-sizing: border-box;
 	font-size: 28px;
-	margin: 0 10px 0 0;
+	margin: 0 1% 0 0;
 	box-shadow: 2px 2px 8px #333333;
 	-webkit-transition: all 500ms ease;
 	-moz-transition: all 500ms ease;
@@ -481,14 +481,14 @@ table {
 .button.blue { background: #198696; color: #ffffff; }
 .button.blue:hover { background: #ffffff; color: #198696; border-color: #198696; }
 
-.widget-title { color: #333333; font-weight: 300; margin-bottom: 20px; }
+.widget-title { color: #333333; font-weight: 300; margin-bottom: 5%; }
 
 
 /*--------------------------------------------------------------
 3.0.1 Header
 --------------------------------------------------------------*/
 #popUp { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(27, 34, 36, 0.8); z-index: 1; }
-#popUp h2 { color: #ffffff; font-size: 42px; letter-spacing: 5px; margin: 37px 0 10px; }
+#popUp h2 { color: #ffffff; font-size: 42px; letter-spacing: 5px; margin: 6% 0 1%; }
 #popWrap { position: fixed; top: 20%; left: 0; right: 0; background: rgba(0, 182, 217, 0.8); width: 40%; margin: 0 auto; padding: 1%; }
 #popForm { display: none; }
 #popContact { display: none; text-align: center; padding: 0 0 8%; }
@@ -539,12 +539,12 @@ table {
 	#hamburger.open {
 		display: inline-block;
 		float: right;
-		right: -30px;
+		right: -5%;
 		-webkit-transition: all 0.2s ease;
 		transition: all 0.2s ease;
 		background: #fff;
 		top: -30px;
-		padding: 10px 10px 33px;
+		padding: 2% 1.5% 6%;
 	}
 	#hamburger.open:before {
 		-ms-transform: rotate(45deg);
@@ -552,8 +552,8 @@ table {
 		transform: rotate(45deg);
 		-webkit-transition: all 0.2s ease;
 		transition: all 0.2s ease;
-		top: 34px;
-		left: 13px;
+		top: 60%;
+		left: 20%;
 	}
 	#hamburger.open:after {
 		-ms-transform: rotate(-45deg);
@@ -562,8 +562,8 @@ table {
 		border-bottom: 0;
 		-webkit-transition: all 0.2s ease;
 		transition: all 0.2s ease;
-		top: 33px;
-		right: 10px;
+		top: 58%;
+		right: 20%;
 	}
 
 
@@ -587,14 +587,14 @@ table {
 }
 #featured img { display: block; }
 
-#hireTim { text-align: center; background: #5d6a6d; padding: 40px 20px; }
+#hireTim { text-align: center; background: #5d6a6d; padding: 3%; }
 #hireTim h2 {
 	color: #ffffff;
 	font-weight: 300;
 	font-size: 32px;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	margin-bottom: 25px;
+	margin-bottom: 3%;
 }
 .movement {
 	height: 500px;
@@ -606,7 +606,7 @@ table {
 	margin: 0 auto;
 }
 
-#testimonials { background: #198696; padding: 90px 20px; }
+#testimonials { background: #198696; padding: 6% 3%; }
 #tesimonials-inner {
 	width: 80%;
 	margin: 0 auto;
@@ -626,10 +626,10 @@ table {
 	text-align: left;
 	background: rgba(255, 255, 255, 0.8);
 	position: absolute;
-	bottom: 20px;
+	bottom: 8%;
 	left: 0;
 	right: 0;
-	padding: 5px 20px;
+	padding: 2% 5%;
 }
 .headshot h4 { font-size: 22px; }
 .testimonial p { color: #ffffff; font-weight: 100; font-style: italic; text-align: left; margin: 0; }
@@ -681,12 +681,12 @@ table {
 #footer-widgets-container { margin-left: 8%; }
 #footer-widgets .button { display: block; width: 85%; max-width: 300px; text-align: center; }
 #footer-widgets .widget { display: inline-block; text-align: left; vertical-align: top; color: #ffffff; width: 25%; }
-#phoneFoot, #addressFoot, #emailFoot { margin-bottom: 10px; font-weight: 100; }
+#phoneFoot, #addressFoot, #emailFoot { margin-bottom: 2%; font-weight: 100; }
 #phoneFoot a, #addressFoot a, #emailFoot { color: #ffffff; text-decoration: none; }
-#phoneFoot { background: url('images/phone.png') no-repeat; display: block; text-indent: 25px; line-height: normal; }
-#addressFoot { background: url('images/home.png') no-repeat; display: block; text-indent: 25px; line-height: normal; }
-#emailFoot { background: url('images/mail.png') no-repeat; display: block; text-indent: 25px; line-height: normal; }
-#site-info { background: #00b6d9; color: #ffffff; padding: 20px; overflow: auto; }
+#phoneFoot { background: url('images/phone.png') no-repeat; display: block; text-indent: 8%; line-height: normal; }
+#addressFoot { background: url('images/home.png') no-repeat; display: block; text-indent: 8%; line-height: normal; }
+#emailFoot { background: url('images/mail.png') no-repeat; display: block; text-indent: 8%; line-height: normal; }
+#site-info { background: #00b6d9; color: #ffffff; padding: 1%; overflow: auto; }
 #site-info #aboutSocial { float: none; text-align: right; padding: 0 0 1%; }
 #site-info #aboutSocial .social { width: 42px; height: 42px; display: inline-block; }
 #site-info a { color: #ffffff; }
@@ -815,7 +815,7 @@ textarea {
 	text-decoration: none;
 	line-height: normal;
 	float: right;
-	margin: 0 18px;
+	margin: 0 1%;
 }
 
 /*--------------------------------------------------------------
@@ -871,7 +871,7 @@ a:active {
 	display: block;
 	text-decoration: none;
 	color: #ffffff;
-	margin: 20px 20px 0;
+	margin: 2% 20px 0;
 	border-bottom: solid 0px #333333;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
@@ -884,6 +884,7 @@ a:active {
 }
 
 .main-navigation ul ul {
+	background: #5d6a6d;
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	float: left;
 	position: absolute;
@@ -931,17 +932,6 @@ a:active {
 /* Small menu. */
 .menu-toggle {
 	display: none;
-}
-
-@media screen and (max-width: 600px) {
-	.menu-toggle,
-	.main-navigation.toggled .nav-menu {
-		display: block;
-	}
-
-	.main-navigation ul {
-		display: none;
-	}
 }
 
 .site-main .comment-navigation,
@@ -1148,7 +1138,7 @@ a:active {
 	text-shadow: 1px 1px 2px #000000;
 }
 #offerHead .formWrap input { width: 100%; display: block; }
-#offerHead .formWrap input[type="text"] { padding: 5px; font-size: 30px; font-weight: 100; }
+#offerHead .formWrap input[type="text"] { padding: 2%; font-size: 30px; font-weight: 100; }
 
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
@@ -1162,7 +1152,7 @@ a:active {
 .full #main { width: 100%; }
 #primary.testimonials #main, #primary.faq #main { width: 100%; float: none; }
 #primary.page #secondary { width: 26%; float: right; }
-.event-small { color: #5d6a6d; clear: both; margin-bottom: 12px; overflow: auto; }
+.event-small { color: #5d6a6d; clear: both; margin-bottom: 2%; overflow: auto; }
 .event-text {
 	width: 68%;
 }
@@ -1319,6 +1309,7 @@ object {
 }
 
 /*** RESPONSIVE STYLES ***/
+/*** DESKTOP & LAPTOP ***/
 @media only screen and (max-width: 1500px){
 
 }
@@ -1331,6 +1322,7 @@ object {
 @media only screen and (max-width: 1200px){
 
 }
+/*** IPAD & TABLETS ***/
 @media only screen and (max-width: 1024px){
 
 }
@@ -1340,8 +1332,16 @@ object {
 @media only screen and (max-width: 768px){
 
 }
+/*** Mobile Devices ***/
 @media only screen and (max-width: 720px){
+	.menu-toggle,
+	.main-navigation.toggled .nav-menu {
+		display: block;
+	}
 
+	.main-navigation ul {
+		display: none;
+	}
 }
 @media only screen and (max-width: 480px){
 
