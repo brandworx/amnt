@@ -43,9 +43,9 @@ get_header(); ?>
 						<?php the_post_thumbnail('event'); ?>
 						<div class="event-sum">
 							<div id="slash"></div>
-							<h2><?php the_title(); ?></h2>
-							<span class="event-meta"><?php echo $date; ?> | <?php echo $location; ?> | <?php echo $city . ', ' . $state; ?></span>
-							<p><?php the_excerpt(); ?>
+							<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+							<span class="event-meta"><span class="date"><?php echo $date; ?></span><span class="location"> | <?php echo $location; ?></span><span class="city"> | <?php echo $city . ', ' . $state; ?></span></span>
+							<?php the_excerpt(); ?>
 							<?php if($text && $link){ echo '<a class="button green" href="' . $link . '">' . $text . '</a>'; } ?>
 							<a class="button blue" href="<?php the_permalink(); ?>">More Info</a>
 						</div>

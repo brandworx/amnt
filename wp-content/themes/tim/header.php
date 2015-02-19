@@ -18,6 +18,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+
 <div id="page" class="hfeed site">
 
 <div id="popUp">
@@ -45,7 +46,7 @@
 		<a id="facebook" class="social facebook right" target="_blank" href="<?php the_field('facebook_url','option'); ?>"></a>
 		<a id="twitter" class="social twitter right" target="_blank" href="<?php the_field('twitter_url','option'); ?>"></a>
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', 'tim' ); ?></button>
+			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->

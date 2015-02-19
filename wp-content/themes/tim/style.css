@@ -666,11 +666,10 @@ table {
 #about > .left { width: 76%; }
 #about > .left h2 { font-weight: 400; }
 
-
-
 /*--------------------------------------------------------------
 3.2 Footer
 --------------------------------------------------------------*/
+#colophon { border-top: solid 5px #B8D100; }
 #footer-bar { background: #00b6d9; text-align: center; padding: 1%; color: #ffffff; }
 #footer-bar h2 { font-weight: 400; margin-bottom: 1%; }
 #footer-bar .field-wrap { display: inline-block; vertical-align: top; margin-right: 1%; }
@@ -771,7 +770,7 @@ textarea {
 5.0 Navigation
 --------------------------------------------------------------*/
 
-#logo { display: inline-block; float: left; width: 10%; max-width: 170px; }
+#logo { display: inline-block; float: left; width: 10%; max-width: 170px; min-width: 50px; }
 #headCTAs { display: inline-block; float: right; text-align: right; padding: 15px 2%; }
 #mobileMenu {
 	display: none;
@@ -1163,8 +1162,9 @@ a:active {
 	overflow: auto;
 }
 .event-sum { padding: 3%; position: absolute; width: 54%; top: 0; bottom: 0; }
-.event-sum h2 { color: #ffffff; text-shadow: 1px 1px 2px #000000; }
-.event-sum .event-meta { color: #b8d100; font-size: 27px; }
+.event-sum h2 { text-shadow: 1px 1px 2px #000000; }
+.event-sum h2 a { color: #ffffff; text-decoration: none; }
+.event-sum .event-meta { display: block; color: #b8d100; font-size: 27px; }
 .event-sum p { color: #ffffff; }
 #slash { position: absolute; width: 28%; top: -2px; bottom: 0; }
 .event-entry img { display: block; width: 46%; }
@@ -1311,29 +1311,74 @@ object {
 /*** RESPONSIVE STYLES ***/
 /*** DESKTOP & LAPTOP ***/
 @media only screen and (max-width: 1500px){
-
+	.event-sum p { margin-top: 0; }
 }
 @media only screen and (max-width: 1400px){
 
 }
 @media only screen and (max-width: 1300px){
+	h1 { font-size: 32px; font-weight: 800; }
+	h2 { font-size: 28px; font-weight: 600; }
+	h3 { font-size: 24px; font-weight: 500; }
+	h4 { font-size: 18px; font-weight: 400; }
+	h5 { font-size: 16px; font-weight: 300; }
+	h6 { font-size: 14px; font-weight: 100; font-style: italic; }
 
+	.event-sum .event-meta { font-size: 16px; }
+	.event-sum p { font-size: 12px; }
 }
 @media only screen and (max-width: 1200px){
 
 }
 /*** IPAD & TABLETS ***/
 @media only screen and (max-width: 1024px){
+	#offerHead { width: 40%; }
 
+	.event-sum h2 { font-size: 28px; }
+	.event-sum .button { padding: 5px 10px; font-size: 16px; }
 }
 @media only screen and (max-width: 900px){
+	#menu-primary-menu { font-size: 12px; }
+	.main-navigation a { margin: 2% 10px 0; }
 
+	.event-sum .event-meta { margin-bottom: 10px; }
+	.event-sum p { display: none; }
 }
 @media only screen and (max-width: 768px){
 
 }
 /*** Mobile Devices ***/
 @media only screen and (max-width: 720px){
+	h1 { font-size: 28px; font-weight: 800; }
+	h2 { font-size: 24px; font-weight: 600; }
+	h3 { font-size: 22px; font-weight: 500; }
+	h4 { font-size: 18px; font-weight: 400; }
+	h5 { font-size: 16px; font-weight: 300; }
+	h6 { font-size: 14px; font-weight: 100; font-style: italic; }
+	.button { font-size: 18px; }
+	header {
+		padding: 30px 2% 0;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 85px;
+		z-index: 30;
+	}
+	header .social { display: none; }
+	header #phone {
+		display: block;
+		font-size: 24px;
+		margin: 0;
+		background: #b8d100;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		z-index: 30;
+		text-align: center;
+	}
+	header #logo { width: 55px; }
 	.menu-toggle,
 	.main-navigation.toggled .nav-menu {
 		display: block;
@@ -1342,10 +1387,111 @@ object {
 	.main-navigation ul {
 		display: none;
 	}
+	#site-navigation button {
+		position: absolute;
+		top: 40px;
+		right: 3%;
+		background: #5d6a6d;
+		border: none;
+		width: 42px;
+		height: 35px;
+		color: #b8d100;
+		text-shadow: none;
+		box-shadow: none;
+	}
+	#site-navigation button:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		border-top: solid 5px #b8d100;
+		width: 30px;
+		-webkit-transition: all 0.2s ease;
+		transition: all 0.2s ease;
+	}
+	#site-navigation button:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 15px;
+		left: 6px;
+		border-top: solid 5px #b8d100;
+		border-bottom: solid 5px #b8d100;
+		width: 30px;
+		height: 14px;
+		-webkit-transition: all 0.2s ease;
+		transition: all 0.2s ease;
+	}
+	#site-navigation.toggled button:before {
+		-ms-transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+		-webkit-transition: all 0.2s ease;
+		transition: all 0.2s ease;
+		top: 16px;
+	}
+	#site-navigation.toggled button:after {
+		-ms-transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+		-webkit-transition: all 0.2s ease;
+		transition: all 0.2s ease;
+		border-bottom: none;
+		top: 15px;
+		left: 9px;
+	}
+	#menu-primary-menu {
+		background: rgba(255, 255, 255, 0.95);
+		position: absolute;
+		top: 90px;
+		left: 0;
+		right: 0;
+		text-align: right;
+		z-index: 30;
+	}
+	.main-navigation li { float: none; display: block; }
+	#menu-primary-menu a { color: #5D6A6D; }
+	#menu-primary-menu a:hover { color: #b8d100; }
+
+	#content { margin-top: 85px; }
+
+	.entry-title { position: relative; max-width: inherit; font-size: 28px; margin-top: 20%; }
+	.page #main { width: auto; float: none; }
+	#primary.page #secondary { display: none; }
+
+	.event-sum h2 { font-size: 20px; }
+	.event-sum .event-meta { font-size: 12px; }
+
+	.face { top: inherit; bottom: 0; width: 20%; }
+	.testimonial-entry .titleHead h3 { margin-left: 24%; }
+
+	.post-entry .wp-post-image { float: none; width: 100%; }
+	.post-entry .right { float: none; width: 100%; }
+
+
+	#offerHead, #hireTim h2, #parallax-1, #parallax-2, .testimonial, #eventCall, 
+	#callCTA, #about > img.left, #about > .left h2, #about > .left p, #about > .left .button, 
+	#aboutSocial, #footer-bar, #footer-widgets .widget, .event-sum p, 
+	.event-sum .button.green { display: none; }
+	.testimonial:nth-child(1) { display: block; width: 100%; }
+	.testimonial p { font-size: 14px; }
+	#about { text-align: center; }
+	#about > .left { float: none; margin: 0 auto; }
+	#about > .left > .mobile-button { display: inline-block; }
+	#footer-widgets .widget:last-child { display: block; width: 100%; float: none; }
 }
 @media only screen and (max-width: 480px){
+	h1 { font-size: 22px; font-weight: 800; }
+	h2 { font-size: 20px; font-weight: 600; }
+	h3 { font-size: 18px; font-weight: 500; }
+	h4 { font-size: 16px; font-weight: 400; }
+	h5 { font-size: 14px; font-weight: 300; }
+	h6 { font-size: 12px; font-weight: 100; font-style: italic; }
 
+	.event-sum .button { display: none; }
+	.location { display: none; }
 }
-@media only screen and (max-width: 320px){
-
+@media only screen and (max-width: 380px){
+	.event-sum .event-meta { display: none; }
 }
