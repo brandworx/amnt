@@ -37,6 +37,8 @@ get_header(); ?>
 				    endwhile;
 
 				endif;
+
+				wp_reset_query();
 				?>
 
 				</div><!-- .entry-content -->

@@ -57,7 +57,10 @@ get_header(); ?>
 			<div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
 			<div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
 
-			<?php endif; ?>
+			<?php endif; 
+
+			wp_reset_query();
+			?>
 
 				</div><!-- .entry-content -->
 			</article><!-- #post-## -->

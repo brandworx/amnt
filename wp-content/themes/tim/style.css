@@ -1144,7 +1144,7 @@ a:active {
 	display: none;
 }
 
-.home #primary, #primary.full { padding: 0; }
+.home #primary, #primary.full, .archive #primary { padding: 0; }
 #primary { padding: 3%; overflow: auto; }
 .home #primary #main { width: auto; float: none; }
 .page #main { width: 68%; float: left; }

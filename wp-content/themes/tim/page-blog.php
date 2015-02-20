@@ -20,12 +20,13 @@ get_header(); ?>
 			$posts = array(
 				'post_type' => 'post',
 				'orderby' => 'date',
-				'order' => 'ASC',
+				'order' => 'DESC',
 				'posts_per_page' => $numPosts,
 				'paged' => $paged
 			);
 
 			$postsQuery = new WP_Query($posts);
+
 			if($postsQuery->have_posts()) : ?> 
 
 				<?php while($postsQuery->have_posts()) : $postsQuery->the_post(); ?>
@@ -41,9 +42,10 @@ get_header(); ?>
 
 				<?php endwhile; // end of the loop. ?>
 
+			<?php the_posts_navigation(); ?>
+				
+
 			<div class="clearfix"></div>
-			<div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
-			<div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
 
 			<?php endif; ?>
 

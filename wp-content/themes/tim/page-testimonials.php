@@ -51,7 +51,10 @@ get_header(); ?>
 						<?php echo $testimonial; ?>
 					</div>
 
-				<?php endwhile; // end of the loop. ?>
+				<?php endwhile; // end of the loop. 
+				wp_reset_query();
+
+				?>
 
 			<div class="clearfix"></div>
 			
