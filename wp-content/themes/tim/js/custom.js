@@ -3,11 +3,11 @@ jQuery(document).ready(function($){
 
 	//show pop up for contact form
 	$(function(){
-		$('#hireTim a').click(function(e){
-			e.preventDefault();
-			$('#popUp').show();
-			$('#popUp #popForm').show();
-		});
+		// $('#hireTim a').click(function(e){
+		// 	e.preventDefault();
+		// 	$('#popUp').show();
+		// 	$('#popUp #popForm').show();
+		// });
 		$('#hamburger').click(function(){
 			$('#popUp').hide();
 			$('#popUp #popForm').hide();
