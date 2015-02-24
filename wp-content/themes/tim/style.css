@@ -57,7 +57,7 @@ header {
 	background:-moz-linear-gradient( center top, #00b5d9 50%, #06a8c8 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00b5d9', endColorstr='#06a8c8');
 	background-color:#00b5d9;
-	padding: 1% 2%;
+	padding: 1% 2% 0;
 }
 
 article,
@@ -288,6 +288,52 @@ th {
 
 .clearfix { clear: both; }
 
+
+
+
+
+
+/* General Social Button Styling */
+.social-icons {
+	height: 25px;
+	margin: 0;
+	padding: 0;
+}
+
+.social-icons li {
+	list-style-type: none !important;
+	float: left;
+	margin-right: 10px;
+}
+
+.social-icons li:hover .facebook { background: url('images/facebook-hover.png') no-repeat; background-size: 100%; }
+.social-icons li:hover .twitter { background: url('images/twitter-hover.png') no-repeat; background-size: 100%; }
+
+.social-icons li:last-child {
+	margin-right: 0 !important;
+}
+
+.social-icon > span:first-child { background: #01B3D6; border-radius: 100% 0 0 100%; display: inline-block; vertical-align: top; width: 42px; height: 42px; }
+.social-icon span span { display: block; width: 42px; height: 42px; }
+.social-icon a, .social-icon .share-count {
+	background: #01B3D6;
+	display: inline-block;
+	position: relative;
+	left: -4px;
+	vertical-align: top;
+	padding: 9px;
+}
+.social-icon .share-count { border-radius: 0 100% 100% 0; }
+.social-icon a { color: #ffffff; }
+.social-icon a.round { border-radius: 0 25% 25% 0; }
+.social-icon a:visited { color: #ffffff; }
+.social-icon a:hover, .social-icons li:hover a { color: #b8d100; text-decoration: underline; }
+.share-count { color: #ffffff; }
+
+
+
+
+
 /*--------------------------------------------------------------
 2.0 Typography
 --------------------------------------------------------------*/
@@ -457,7 +503,7 @@ table {
 	width: 100%;
 }
 
-.button, input.button.green {
+.button, input.button.green, .posts-navigation .nav-previous a, .posts-navigation .nav-next a {
 	display: inline-block;
 	background: #b8d100;
 	color: #ffffff;
@@ -478,8 +524,8 @@ table {
 .button.small { padding: 1% 2%; font-size: 22px; }
 .button.green { background: #b8d100; color: #ffffff; font-weight: 700; }
 .button.green:hover { background: #ffffff; color: #b8d100; border-color: #b8d100; }
-.button.blue { background: #198696; color: #ffffff; }
-.button.blue:hover { background: #ffffff; color: #198696; border-color: #198696; }
+.button.blue, .posts-navigation .nav-previous a, .posts-navigation .nav-next a { background: #198696; color: #ffffff; }
+.button.blue:hover, .posts-navigation .nav-previous a:hover, .posts-navigation .nav-next a:hover { background: #ffffff; color: #198696; border-color: #198696; }
 
 .widget-title { color: #333333; font-weight: 300; margin-bottom: 5%; }
 
@@ -770,7 +816,7 @@ textarea {
 5.0 Navigation
 --------------------------------------------------------------*/
 
-#logo { display: inline-block; float: left; width: 10%; max-width: 170px; min-width: 50px; }
+#logo { display: inline-block; float: left; width: 10%; max-width: 150px; min-width: 50px; }
 #headCTAs { display: inline-block; float: right; text-align: right; padding: 15px 2%; }
 #mobileMenu {
 	display: none;
@@ -823,10 +869,6 @@ textarea {
 a {
 	color: #b8d100;
 	text-decoration: none;
-}
-
-a:visited {
-	color: #198696;
 }
 
 a:hover,
@@ -934,10 +976,19 @@ a:active {
 }
 
 .site-main .comment-navigation,
-.site-main .posts-navigation,
 .site-main .post-navigation {
 	margin: 1.5em 0;
 	overflow: hidden;
+}
+
+.posts-navigation {
+	overflow: hidden;
+	margin: 0;
+	padding: 2% 3%;
+}
+
+.testimonials .posts-navigation {
+	padding: 0;
 }
 
 .comment-navigation .nav-previous,
@@ -1096,7 +1147,8 @@ a:active {
 .post-entry .wp-post-image { width: 48%; }
 .post-entry .right { width: 48%; }
 
-.comment-list { padding: 0; margin: 0 0 2%; }
+#comments { margin-top: 20px; }
+.comment-list { padding: 0; margin: 0 0 2%; list-style: none; }
 .comment-list a { color: #b8d100; text-decoration: none; }
 .comment-list a:hover { text-decoration: underline; }
 .comment-list .comment { background: #F4F4F4; padding: 3%; margin-top: 1%; }
@@ -1186,6 +1238,7 @@ a:active {
 	top: -35%;
 	left: 2%;
 	width: 12%;
+	max-width: 175px;
 }
 .titleHead h3 { display: inline-block; padding: 2% 3%; color: #ffffff; text-shadow: 1px 1px 2px #000000; }
 .testimonial-entry .titleHead h3 { margin-left: 14%; }
@@ -1355,7 +1408,7 @@ object {
 	h4 { font-size: 18px; font-weight: 400; }
 	h5 { font-size: 16px; font-weight: 300; }
 	h6 { font-size: 14px; font-weight: 100; font-style: italic; }
-	.button { font-size: 18px; }
+	.button, .posts-navigation .nav-previous a, .posts-navigation .nav-next a { font-size: 18px; }
 	header {
 		padding: 30px 2% 0;
 		position: fixed;
@@ -1444,7 +1497,7 @@ object {
 	#menu-primary-menu {
 		background: rgba(255, 255, 255, 0.95);
 		position: absolute;
-		top: 90px;
+		top: 85px;
 		left: 0;
 		right: 0;
 		text-align: right;

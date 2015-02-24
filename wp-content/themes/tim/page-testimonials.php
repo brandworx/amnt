@@ -16,21 +16,11 @@ get_header(); ?>
 				<div class="entry-content">
 		<?php 
 			$numPosts = get_field('num_posts');
-			$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-			$posts = array(
-				'post_type' => 'testimonial',
-				'meta_key' => 'order',
-				'orderby' => 'meta_value_num',
-				'order' => 'ASC',
-				'posts_per_page' => $numPosts,
-				'paged' => $paged
-			);
+			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
-			$postsQuery = new WP_Query($posts);
+			query_posts( array( 'post_type' => 'testimonial', 'meta_key' => 'order', 'orderby' => 'meta_value_num', 'order' => 'ASC', 'posts_per_page' => $numPosts, 'paged' => $paged ) );
 
-			if($postsQuery->have_posts()) : ?> 
-
-				<?php while($postsQuery->have_posts()) : $postsQuery->the_post(); 
+			if(have_posts()) : while(have_posts()) : the_post();
 
 				$face = get_field('person_image');
 				$company = get_field('company');
@@ -51,15 +41,11 @@ get_header(); ?>
 						<?php echo $testimonial; ?>
 					</div>
 
-				<?php endwhile; // end of the loop. 
-				wp_reset_query();
+				<?php endwhile; // end of the loop. ?>
 
-				?>
+			<?php the_posts_navigation(); ?>
 
 			<div class="clearfix"></div>
-			
-			<div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
-			<div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
 
 			<?php endif; ?>
 

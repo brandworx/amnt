@@ -16,20 +16,12 @@ get_header(); ?>
 				<div class="entry-content">
 		<?php 
 			$numPosts = get_field('num_posts');
-			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-			$posts = array(
-				'post_type' => 'post',
-				'orderby' => 'date',
-				'order' => 'DESC',
-				'posts_per_page' => $numPosts,
-				'paged' => $paged
-			);
 
-			$postsQuery = new WP_Query($posts);
+			query_posts( array( 'post_type' => 'post', 'posts_per_page' => $numPosts, 'orderby' => 'date', 'order' => 'DESC' ) );
 
-			if($postsQuery->have_posts()) : ?> 
+			if(have_posts()) : ?> 
 
-				<?php while($postsQuery->have_posts()) : $postsQuery->the_post(); ?>
+				<?php while(have_posts()) : the_post(); ?>
 
 					<div class="post-entry">
 						<?php the_post_thumbnail('blogThumb', array('class' => 'left')); ?>
@@ -43,11 +35,13 @@ get_header(); ?>
 				<?php endwhile; // end of the loop. ?>
 
 			<?php the_posts_navigation(); ?>
-				
 
 			<div class="clearfix"></div>
 
-			<?php endif; ?>
+			<?php endif; 
+
+			wp_reset_query();
+			?>
 
 				</div><!-- .entry-content -->
 			</article><!-- #post-## -->

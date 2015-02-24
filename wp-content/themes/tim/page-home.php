@@ -141,8 +141,7 @@ get_header(); ?>
 						}
 					?>
 					<div id="eventSocial">
-						<a class="social facebook left" target="_blank" href="<?php the_field('facebook_url','option'); ?>"></a>
-						<a class="social twitter left" target="_blank" href="<?php the_field('twitter_url','option'); ?>"></a>
+						<?php ds_social_media_icons(); ?>
 					</div>
 				</div>
 			</div>
@@ -178,8 +177,7 @@ get_header(); ?>
 					<?php if($aboutCTA && $aboutLink) { echo '<a class="button blue" href="' . $aboutLink . '">' . $aboutCTA . '</a>'; } ?>
 					<?php if($aboutCTA && $aboutLink) { echo "<a class='mobile-button button blue' href='" . $aboutLink . "'>Tim's Story</a>"; } ?>
 					<div id="aboutSocial">
-						<a class="social facebook left" target="_blank" href="<?php the_field('facebook_url','option'); ?>"></a>
-						<a class="social twitter left" target="_blank" href="<?php the_field('twitter_url','option'); ?>"></a>
+						<?php ds_social_media_icons(); ?>
 					</div>
 				</div>
 			</div>

@@ -17,19 +17,12 @@ get_header(); ?>
 		<?php 
 			$numEvents = get_field('num_posts','option');
 			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-			$events = array(
-				'post_type' => 'event',
-				'meta_key' => 'event_date',
-				'orderby' => 'meta_value_num',
-				'order' => 'ASC',
-				'posts_per_page' => $numEvents,
-				'paged' => $paged
-			);
 
-			$eventsQuery = new WP_Query($events);
-			if($eventsQuery->have_posts()) : ?> 
+			query_posts( array( 'post_type' => 'event', 'meta_key' => 'event_date', 'orderby' => 'meta_value_num', 'order' => 'ASC', 'posts_per_page' => $numEvents, 'paged' => $paged ) );
 
-				<?php while($eventsQuery->have_posts()) : $eventsQuery->the_post(); ?>
+			if(have_posts()) : ?> 
+
+				<?php while(have_posts()) : the_post(); ?>
 				<?php
 					$date = get_field('event_date');
 					$location = get_field('event_location');
@@ -53,9 +46,9 @@ get_header(); ?>
 
 				<?php endwhile; // end of the loop. ?>
 
+			<?php the_posts_navigation(); ?>
+
 			<div class="clearfix"></div>
-			<div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
-			<div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
 
 			<?php endif; 
 
