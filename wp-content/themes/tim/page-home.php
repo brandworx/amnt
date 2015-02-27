@@ -141,7 +141,22 @@ get_header(); ?>
 						}
 					?>
 					<div id="eventSocial">
-						<?php ds_social_media_icons(); ?>
+						<div class="social-icons-wrap">
+							<ul class="social-icons">
+								<!-- Facebook Button-->
+								<li class="social-icon">
+									<span><span class="facebook"></span></span>
+									<a <?php if($likeCount < 1) { echo 'class="round"'; } ?> onclick="javascript:popupCenter('https://www.facebook.com/sharer/sharer.php?u=http://narrowthegap.com/product/narrow-the-gap-live-event/&amp;appId=1448115758741172','Facebook Share', '540', '400');return false;" href="https://www.facebook.com/sharer/sharer.php?u=http://narrowthegap.com/product/narrow-the-gap-live-event/&amp;appId=1448115758741172" target="blank">Share</a>
+									<?php if($likeCount > 0) { ?><span class="share-count"><?php echo ds_post_like_count( $post_id ); ?></span><?php } ?>
+								</li>
+								<!-- Twitter Button -->
+								<li class="social-icon">
+									<span><span class="twitter"></span></span>
+									<a <?php if($likeCount < 1) { echo 'class="round"'; } ?> onclick="javascript:popupCenter('https://twitter.com/share?&amp;url=http://narrowthegap.com/product/narrow-the-gap-live-event/&amp;text=<?php the_title(); ?>&amp;via=<?php the_field('twitter_handle','option'); ?>','Tweet', '540', '400');return false;" href="https://twitter.com/share?&amp;url=http://narrowthegap.com/product/narrow-the-gap-live-event/&amp;text=<?php the_title(); ?>&amp;via=<?php the_field('twitter_handle','option'); ?>" target="blank">Tweet</a>
+									<?php if($tweetCount > 0) { ?><span class="share-count"><?php echo ds_post_tweet_count( $post_id ); ?></span><?php } ?>
+								</li>
+							</ul>
+						</div><!-- .social-icons-wrap -->
 					</div>
 				</div>
 			</div>
